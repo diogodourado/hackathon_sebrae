@@ -18,13 +18,16 @@
 <ul id="ordenando<?php echo $local; ?>">	
 <?php
 		
-	$processo = mysql_query("SELECT id, texto, data FROM postagens WHERE usuario='$usuario' AND local='$local' ORDER BY ordem");
+	$processo = mysql_query("SELECT id, texto, cor, data FROM postagens WHERE usuario='$usuario' AND local='$local' ORDER BY ordem");
 	if (mysql_num_rows($processo)) {
 		while ($dados = mysql_fetch_assoc($processo)) {
 		$id = $dados['id'];
 		$texto = $dados['texto'];
+		$cor = $dados['cor'];
+		$texto = $dados['texto'];
+		$data = $dados['data'];
 ?>
-	<li id="<?php echo $id; ?>" onMouseOver="$('.exclui<?php echo $id; ?>').show();" onMouseOut="$('.exclui<?php echo $id; ?>').hide();"><?php echo $texto; ?> <span style="display:none; background:#C00; padding:1px 4px;" class="exclui<?php echo $id; ?>"><a href="Excluir.php?id=<?php echo $id; ?>&local=<?php echo $local; ?>" target="#AcoesOcultas" onClick="return Aviso(this, 'Tem certeza que deseja excluir:\n\n <?php echo $texto; ?>'); return Link(this);" style="color:#FFF;">Excluir</a></span></li>
+	<li id="<?php echo $id; ?>" onMouseOver="$('.exclui<?php echo $id; ?>').show();" onMouseOut="$('.exclui<?php echo $id; ?>').hide();" style="background:<?php echo $cor; ?>;"><?php echo $texto; ?> <span style="display:none; background:#C00; padding:1px 4px;" class="exclui<?php echo $id; ?>"><a href="Excluir.php?id=<?php echo $id; ?>&local=<?php echo $local; ?>" target="#AcoesOcultas" onClick="return Aviso(this, 'Tem certeza que deseja excluir:\n\n <?php echo $texto; ?>'); return Link(this);" style="color:#FFF; text-decoration:none; font-size:10px; font-weight:bold;">Excluir</a></span></li>
 <?php
 		}
 	}

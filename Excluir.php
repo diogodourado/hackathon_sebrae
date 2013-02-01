@@ -8,7 +8,7 @@ if ($_GET['id']) {
 	if (!$usuario) $usuario = $_SESSION['usuario'];
 	
 	
-	 mysql_query("SELECT ordem FROM postagens WHERE usuario='$usuario' AND local='$local' AND id='$id' LIMIT 1");
+	 $processo = mysql_query("SELECT ordem FROM postagens WHERE usuario='$usuario' AND local='$local' AND id='$id' LIMIT 1");
 	 $dados = mysql_fetch_assoc($processo);
 	 $ordem = $dados['ordem'];
 	 

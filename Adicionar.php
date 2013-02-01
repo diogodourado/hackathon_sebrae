@@ -6,6 +6,9 @@ if ($_POST['Enviar']==1) {
 	//Recuperando dados
 	$local = mysql_real_escape_string($_POST['local']);
 	$texto = mysql_real_escape_string($_POST['texto']);
+	$cor = mysql_real_escape_string($_POST['cor']);
+	
+	
 	
 	// Tratando erros de preenchimento
 	if (!$erro) if (!$local) $erro = 'Erro interno do sistema';
@@ -18,7 +21,7 @@ if ($_POST['Enviar']==1) {
 		$processo = mysql_query("SELECT id FROM postagens WHERE usuario='$usuario' AND local='$local'");
 		$ordem = mysql_num_rows($processo)+1;
 		
-		mysql_query("INSERT INTO postagens SET usuario='$usuario', local='$local', texto='$texto', ordem='$ordem', data=now();");
+		mysql_query("INSERT INTO postagens SET usuario='$usuario', local='$local', texto='$texto', cor='$cor', ordem='$ordem', data=now();");
 	}
 	?>
     
@@ -41,7 +44,7 @@ $local = $_GET['local'];
 <form name="Adicionar" action="Adicionar.php" target="#Adicionar<?php echo $local; ?>" method="post" enctype="multipart/form-data" class="AdicionarForm"> 
 
 <div class="bubbleInfo">
-  <img class="trigger" src="img/question.png" style="float:left; margin-right:5px;">
+  <img class="trigger" src="img/question.png" style="float:right; margin-right:5px;">
 <table id="dpop" class="popup">
         	<tbody><tr>
         		<td id="topleft" class="corner">&nbsp;</td>
@@ -84,11 +87,17 @@ $local = $_GET['local'];
         	</tr>
         </tbody></table>
 </div>
+<span style="background: #0C9">
+<input id="cores" type="text" name="cor" value="#FF9" style="float:left;" />
 
-<label><input type="text" name="texto" value="" maxlength="200" style="padding:3px; width:130px; font-weight:bold;">
-  </label>
+<script>
+$('#cores').colorPicker({pickerDefault: "FF9", colors: ["FF9", "6FF", "CFF", "F9F", "0C9", "CCCCCC"], transparency: false}); 
+</script>   
+   
+<label><input type="text" name="texto" value="" maxlength="200" style="padding:3px; width:110px; font-weight:bold;"></label>
+
 <input type="hidden" name="local" value="<?php echo $local;  ?>">    
-<input type="submit" value="Adicionar" onclick="Postar(this)" style="padding:3px;">
+<input type="submit" value="Adicionar" onclick="Postar(this)" style="padding:3px; width:60px;">
 </form>
 
 <script>

@@ -10,6 +10,7 @@ session_start();
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
 <script src="js/jquery-1.9.0.js" type="text/javascript"></script>
+<script src="js/jquery.colorPicker.js" type="text/javascript"></script>
 <script src="js/jquery-ui.min.js" type="text/javascript"></script>
 <script src="js/main.js" type="text/javascript"></script>
 

@@ -1,4 +1,8 @@
-<?php require_once 'inc/conexao.php'; ?>
+<?php
+session_start();
+if (!$_SESSION['usuario']) exit();
+require_once 'inc/conexao.php';
+?>
 <div id="AcoesOcultas"></div>
 
     
@@ -6,7 +10,7 @@
     function Adicionar($local) {
 		
 	if ($local=='parcerias' || $local=='proposta' || $local=='segmento') { $rolagem = 'txt2'; } else { $rolagem = 'txt1'; }
-		
+			
 	echo "<div id=\"Txt{$local}\" class=\"{$rolagem}\">";
 	include 'Mostrar.php';
 	echo "
@@ -166,7 +170,7 @@ function Organiza() {
 		$('#receitas').height(linha-5);
 
 		$('.txt1').height(linha-60);
-		$('.txt2').height(linha+120);
+		$('.txt2').height(linha+115);
 		
 	
 }
