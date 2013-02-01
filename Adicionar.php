@@ -2,6 +2,7 @@
 if ($_POST['Enviar']==1) {
 	require_once 'inc/conexao.php';
 	
+// aloha
 
 	//Recuperando dados
 	$local = mysql_real_escape_string($_POST['local']);
