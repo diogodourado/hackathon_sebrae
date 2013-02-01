@@ -1,6 +1,7 @@
-﻿<?php
+<?php
 if ($_POST['Enviar']==1) {
 	require_once 'inc/conexao.php';
+	
 
 	//Recuperando dados
 	$local = mysql_real_escape_string($_POST['local']);
@@ -40,7 +41,7 @@ $local = $_GET['local'];
 <form name="Adicionar" action="Adicionar.php" target="#Adicionar<?php echo $local; ?>" method="post" enctype="multipart/form-data" class="AdicionarForm"> 
 
 <div class="bubbleInfo">
-  <img class="trigger" src="img/question.png" style="float:left; margin-right:5px;" />
+  <img class="trigger" src="img/question.png" style="float:left; margin-right:5px;">
 <table id="dpop" class="popup">
         	<tbody><tr>
         		<td id="topleft" class="corner">&nbsp;</td>
@@ -54,7 +55,7 @@ $local = $_GET['local'];
                 
                	  <table class="popup-contents">
                     <tbody><tr><td>
-                    <img src="img/<?php echo $local; ?>.png" style="float:left; margin:0px 10px 10px 5px;" />
+                    <img src="img/<?php echo $local; ?>.png" style="float:left; margin:0px 10px 10px 5px;">
                     <?php
                     if ($local=='proposta') echo 'Qual seu pacote de produtos e serviços e o valor que ele posssui para os clientes';
                     if ($local=='atividades') echo 'Liste ações/tarefas importantes que sua empresa deve atender conforme a Proposta de Valor e para fazer seu Modelo de Negócios funcionar.';
@@ -78,16 +79,16 @@ $local = $_GET['local'];
 
         	<tr>
         		<td class="corner" id="bottomleft"></td>
-        		<td class="bottom"><img width="30" height="29" alt="popup tail" src="http://static.jqueryfordesigners.com/demo/images/coda/bubble-tail2.png"/></td>
+        		<td class="bottom"><img width="30" height="29" alt="popup tail" src="http://static.jqueryfordesigners.com/demo/images/coda/bubble-tail2.png"></td>
         		<td id="bottomright" class="corner"></td>
         	</tr>
         </tbody></table>
 </div>
 
-<label><input type="text" name="texto" value="" maxlength="200" style="padding:3px; width:130px; font-weight:bold;" />
+<label><input type="text" name="texto" value="" maxlength="200" style="padding:3px; width:130px; font-weight:bold;">
   </label>
-<input type="hidden" name="local" value="<?php echo $local;  ?>" />    
-<input type="submit" value="Adicionar" onClick="Postar(this)" style="padding:3px;">
+<input type="hidden" name="local" value="<?php echo $local;  ?>">    
+<input type="submit" value="Adicionar" onclick="Postar(this)" style="padding:3px;">
 </form>
 
 <script>

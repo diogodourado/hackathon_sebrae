@@ -5,7 +5,7 @@ session_start();
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>ABCanvas</title>
+<title>ABCanvas - por Diogo Dourado</title>
 
 <link rel="stylesheet" type="text/css" href="css/main.css">
 

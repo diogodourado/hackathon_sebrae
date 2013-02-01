@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 if ($_POST['Enviar']==1) {
 	require_once 'inc/conexao.php';
 	

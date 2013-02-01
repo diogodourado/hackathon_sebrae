@@ -1,4 +1,4 @@
-﻿<?php require_once 'inc/conexao.php'; ?>
+<?php require_once 'inc/conexao.php'; ?>
 <div id="AcoesOcultas"></div>
 
     
@@ -30,13 +30,13 @@
     
 
 <div id="barraTopo">
-	<div style="width:150px; float:left;"><a href="./"><img src="img/abcanvas.png" /></a></div>
+	<div style="width:150px; float:left;"><a href="./"><img src="img/abcanvas.png"></a></div>
 	<div style="width:400px; float:left; padding:15px 0px 0px 150px;">
-    <span style="font-size:18px; color:#333;"><?php echo $_SESSION['negocio']; ?></span><br />
+    <span style="font-size:18px; color:#333;"><?php echo $_SESSION['negocio']; ?></span><br>
     <span style="font-size:14px; color:#555;"><?php echo $_SESSION['nome']; ?> - <?php echo $_SESSION['email']; ?></span>
     
     </div>
-   	<div style="width:100px; text-align:right; float:right;"><a href="Sair.php"><img src="img/sair.png" /></a></div>
+   	<div style="width:100px; text-align:right; float:right;"><a href="Sair.php"><img src="img/sair.png"></a></div>
 
 
 </div>

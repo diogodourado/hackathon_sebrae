@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 if ($_GET['id']) {
 	
 	require_once 'inc/conexao.php';

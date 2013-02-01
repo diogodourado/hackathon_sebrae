@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 	require_once 'inc/conexao.php';
 	
 	
@@ -24,7 +24,7 @@
 		$id = $dados['id'];
 		$texto = $dados['texto'];
 ?>
-	<li id="<?php echo $id; ?>" onmouseover="$('.exclui<?php echo $id; ?>').show();" onmouseout="$('.exclui<?php echo $id; ?>').hide();"><?php echo $texto; ?> <span style="display:none; background:#C00; padding:1px 4px;" class="exclui<?php echo $id; ?>"><a href="Excluir.php?id=<?php echo $id; ?>&local=<?php echo $local; ?>" target="#AcoesOcultas" onclick="return Aviso(this, 'Tem certeza que deseja excluir:\n\n <?php echo $texto; ?>'); return Link(this);" style="color:#FFF;">Excluir</a></span></li>
+	<li id="<?php echo $id; ?>" onMouseOver="$('.exclui<?php echo $id; ?>').show();" onMouseOut="$('.exclui<?php echo $id; ?>').hide();"><?php echo $texto; ?> <span style="display:none; background:#C00; padding:1px 4px;" class="exclui<?php echo $id; ?>"><a href="Excluir.php?id=<?php echo $id; ?>&local=<?php echo $local; ?>" target="#AcoesOcultas" onClick="return Aviso(this, 'Tem certeza que deseja excluir:\n\n <?php echo $texto; ?>'); return Link(this);" style="color:#FFF;">Excluir</a></span></li>
 <?php
 		}
 	}
