@@ -35,7 +35,22 @@ CREATE TABLE IF NOT EXISTS `postagens` (
   `data` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `usuario` (`usuario`,`local`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuarios`
+--
+
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(240) NOT NULL,
+  `nome` varchar(240) NOT NULL,
+  `negocio` varchar(240) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
