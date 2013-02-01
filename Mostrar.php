@@ -5,17 +5,18 @@
 	if (!$local) $local = $_GET['local'];
 	if (!$usuario) $usuario = $_SESSION['usuario'];
 	
-	if ($_GET['local']) echo '<br />';
+	if ($_GET['local'] && $_GET['local']!='estrutura' && $_GET['local']!='receitas') $adiciona = 'margin-top: -15px;';
 ?>
 
-	
-    
-    <style>
+   <style>
     #ordenando<?php echo $local; ?> ul { list-style-type: none; margin: 0; padding: 0; margin-bottom: 10px; }
     #ordenando<?php echo $local; ?> li { margin: 5px; padding: 5px; width: 180px; float:left;  }
     </style>
     
-<ul id="ordenando<?php echo $local; ?>">	
+        
+<ul id="ordenando<?php echo $local; ?>" style=" <?php echo $adiciona; ?>">	 
+<?php echo $adiciona; ?>
+
 <?php
 		
 	$processo = mysql_query("SELECT id, texto, cor, data FROM postagens WHERE usuario='$usuario' AND local='$local' ORDER BY ordem");

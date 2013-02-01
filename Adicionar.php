@@ -87,11 +87,10 @@ $local = $_GET['local'];
         	</tr>
         </tbody></table>
 </div>
-<span style="background: #0C9">
 <input id="cores" type="text" name="cor" value="#FF9" style="float:left;" />
 
 <script>
-$('#cores').colorPicker({pickerDefault: "FF9", colors: ["FF9", "6FF", "CFF", "F9F", "0C9", "CCCCCC"], transparency: false}); 
+$('#cores').colorPicker({pickerDefault: "FF9", colors: ["FF9", "99CCFF", "26FF93", "FFB399", "#CC99FF", "DDD"], transparency: false}); 
 </script>   
    
 <label><input type="text" name="texto" value="" maxlength="200" style="padding:3px; width:110px; font-weight:bold;"></label>
