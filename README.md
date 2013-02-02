@@ -1,14 +1,20 @@
-hackathon_sebrae
-Url do sistema em funcionamento: http://dourado.net/sebrae/
+ABCanvas
+===============
 
-Diogo de Azevedo Rocha Dourado diogo@dourado.net
+Aplicativo criado durante o Hackathon Sebrae na Campus Party 2013
 
-Campus Party 2013 - Sebrae Hackathon
+O desafio era criar um aplicativo com a finalidade de facilitar o uso e aprendizado da Metodologia Canvas
 
-Url do sistema em funcionamento:
-http://dourado.net/sebrae/
+       Copyright 2013 Diogo de Azevedo Rocha Dourado <diogo@dourado.net>
 
-Diogo de Azevedo Rocha Dourado
-diogo@dourado.net
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
 
-Campus Party 2013 - Sebrae Hackathon
+         http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
